@@ -1,3 +1,99 @@
-<h1>Hello! 👋</h1>
-<p>Welcome to my website.</p>
-<p>More coming soon...</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sri's Corner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Georgia", serif;
+      background: #fff8f8;
+      color: #5a3d2b;
+      text-align: center;
+    }
+
+    header {
+      padding: 2rem 1rem;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin: 0;
+      color: #b66b6b; /* soft rosy pink */
+      letter-spacing: 1px;
+    }
+
+    .tagline {
+      margin-top: 0.5rem;
+      color: #8a5f46;
+      font-size: 1.1rem;
+    }
+
+    .section {
+      padding: 2.5rem 1.5rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #b66b6b;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #5a3d2b;
+    }
+
+    /* cute divider */
+    .divider {
+      width: 70px;
+      height: 4px;
+      background: #b66b6b;
+      margin: 2rem auto;
+      border-radius: 10px;
+    }
+
+    footer {
+      margin-top: 3rem;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #8a5f46;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Sri’s Corner</h1>
+    <div class="tagline">Pink • Brown • A cozy space on the internet</div>
+  </header>
+
+  <div class="divider"></div>
+
+  <section class="section" id="about">
+    <h2>About Me</h2>
+    <p>
+      Hi! This is <strong>Sri</strong>.  
+      I love <strong>films</strong>, <strong>music</strong>, and the charm of 
+      <strong>Victorian-style houses</strong>.  
+      This little website is my cozy corner on the web — soft pink, warm brown,
+      and a lot of heart.
+    </p>
+  </section>
+
+  <div class="divider"></div>
+
+  <footer>
+    © <span id="year"></span> Sri’s Corner · Made with love ♡
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
