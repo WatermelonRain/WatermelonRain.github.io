@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Sri’s Pixel Corner</title>
+  <title>Watermelon Rain</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
@@ -12,16 +12,10 @@
       --pink-dark: #f26da5;
       --brown-text: #4b2d24;
       --card-bg: #fffdfd;
-      --border-pixel: 4px;
-    }
-
-    * {
-      box-sizing: border-box;
     }
 
     body {
       margin: 0;
-      min-height: 100vh;
       background: var(--pink-light);
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--brown-text);
@@ -30,22 +24,18 @@
     }
 
     .page {
-      width: 100%;
       max-width: 960px;
+      width: 100%;
       padding: 1.5rem 1.5rem 3rem;
     }
 
-    /* HEADER / TITLE BAR */
     .window {
       background: var(--card-bg);
-      border: var(--border-pixel) solid #ffcee4;
+      border: 4px solid #ffcee4;
       box-shadow:
         0 0 0 4px #ffffff,
         0 0 0 8px #ffcee4,
         6px 6px 0 #f3a3c7;
-      border-radius: 0;
-      padding: 0;
-      overflow: hidden;
     }
 
     .window-topbar {
@@ -53,33 +43,10 @@
       padding: 0.4rem 0.8rem;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
       font-size: 0.75rem;
       text-transform: uppercase;
       letter-spacing: 0.12em;
-      color: var(--brown-text);
-    }
-
-    .dots {
-      display: flex;
-      gap: 0.25rem;
-    }
-
-    .dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 0;
-      background: #ffffff;
-      border: 2px solid #f8a0c0;
-    }
-
-    .window-title {
-      flex: 1;
-      text-align: center;
-    }
-
-    .window-body {
-      padding: 1.5rem 1.25rem 1.75rem;
     }
 
     header {
@@ -88,27 +55,17 @@
     }
 
     header h1 {
-      margin: 0;
+      margin: 1rem 0 0.3rem;
       font-size: clamp(1.9rem, 4vw, 2.4rem);
-      text-transform: uppercase;
       letter-spacing: 0.12em;
-      color: var(--brown-text);
     }
 
-    header p {
-      margin: 0.5rem auto 0;
-      max-width: 20rem;
-      font-size: 0.9rem;
-      color: #7a4c3b;
-    }
-
-    /* NAV "TABS" */
     .nav-row {
-      margin: 1.7rem 0 1.3rem;
+      margin: 1.7rem 0;
       display: flex;
       flex-wrap: wrap;
-      gap: 0.6rem;
       justify-content: center;
+      gap: 0.6rem;
     }
 
     .nav-chip {
@@ -119,36 +76,25 @@
       font-size: 0.8rem;
       text-transform: uppercase;
       letter-spacing: 0.11em;
-      cursor: pointer;
       text-decoration: none;
       color: var(--brown-text);
     }
 
-    .nav-chip:hover {
-      background: #ffe3f0;
-      border-color: var(--pink-main);
-    }
-
-    /* LAYOUT */
     main {
       display: grid;
-      grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+      grid-template-columns: 2fr 3fr;
       gap: 1.5rem;
     }
 
     @media (max-width: 720px) {
-      main {
-        grid-template-columns: 1fr;
-      }
+      main { grid-template-columns: 1fr; }
     }
 
-    /* LEFT COLUMN: ABOUT + ART */
     .about-block {
       background: #fff9fc;
       border: 3px solid #ffd4e4;
       padding: 1rem 1.1rem;
-      font-size: 0.95rem;
-      line-height: 1.6;
+      min-height: 155px;
     }
 
     .about-title {
@@ -178,11 +124,9 @@
       font-size: 0.7rem;
       letter-spacing: 0.18em;
       color: #7c4356;
-      text-align: center;
       padding: 0 1rem;
     }
 
-    /* RIGHT COLUMN: CATEGORY CARDS */
     .grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -190,18 +134,13 @@
     }
 
     @media (max-width: 540px) {
-      .grid {
-        grid-template-columns: 1fr;
-      }
+      .grid { grid-template-columns: 1fr; }
     }
 
     .card {
       background: #ffffff;
       border: 3px solid #ffd4e4;
       padding: 0.9rem 0.9rem 1.1rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.4rem;
       position: relative;
     }
 
@@ -210,25 +149,18 @@
       position: absolute;
       inset: 4px;
       border: 1px dashed #ffdce9;
-      pointer-events: none;
-    }
-
-    .card-label {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--pink-dark);
     }
 
     .card-title {
       font-size: 1.05rem;
       font-weight: 600;
+      margin-bottom: 0.4rem;
     }
 
     .card-text {
       font-size: 0.9rem;
       color: #6b4334;
-      line-height: 1.5;
+      min-height: 70px;
     }
 
     .card-tag-row {
@@ -246,7 +178,6 @@
       background: #fff7fb;
     }
 
-    /* FOOTER */
     footer {
       margin-top: 1.8rem;
       font-size: 0.8rem;
@@ -255,116 +186,77 @@
     }
   </style>
 </head>
+
 <body>
   <div class="page">
     <div class="window">
-      <div class="window-topbar">
-        <div class="dots">
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-        </div>
-        <div class="window-title">Sri’s Pixel Corner</div>
-        <div style="width: 40px;"></div>
-      </div>
+      <div class="window-topbar">WATERMELON RAIN</div>
 
-      <div class="window-body">
-        <header>
-          <h1>Sri’s Pixel Corner</h1>
-          <p>a tiny pink &amp; cozy homepage for films, music, photos &amp; thoughts</p>
-        </header>
+      <header>
+        <h1>WATERMELON RAIN</h1>
+      </header>
 
-        <nav class="nav-row">
-          <a class="nav-chip" href="#films">Films</a>
-          <a class="nav-chip" href="#music">Music</a>
-          <a class="nav-chip" href="#photo">Photography</a>
-          <a class="nav-chip" href="#writing">Writings</a>
-        </nav>
+      <nav class="nav-row">
+        <a class="nav-chip" href="#films">Films</a>
+        <a class="nav-chip" href="#music">Music</a>
+        <a class="nav-chip" href="#photo">Photography</a>
+        <a class="nav-chip" href="#writing">Blogs / Notes</a>
+      </nav>
 
-        <main>
-          <!-- LEFT SIDE: ABOUT + ART -->
-          <section>
-            <div class="about-block" id="about">
-              <div class="about-title">About Sri</div>
-              <p>
-                Hi, this is <strong>Sri</strong> ♡  
-                I love <strong>films</strong>, <strong>music</strong>, and
-                the quiet, haunted magic of <strong>Victorian-style houses</strong>.
-              </p>
-              <p>
-                This page is my little corner of the internet — part scrapbook,
-                part moodboard, part diary of whatever I’m currently obsessed with.
-              </p>
+      <main>
+        <!-- LEFT: ABOUT -->
+        <section>
+          <div class="about-block">
+            <div class="about-title">Hi :)</div>
+            <p></p>
+          </div>
+
+          <div class="pixel-art-placeholder">
+            your pixel art will live here someday ✧
+          </div>
+        </section>
+
+        <!-- RIGHT: CARDS -->
+        <section class="grid">
+
+          <article class="card" id="films">
+            <div class="card-title">Films</div>
+            <div class="card-text"></div>
+            <div class="card-tag-row">
+              <span class="tag">watchlists</span>
             </div>
+          </article>
 
-            <div class="pixel-art-placeholder">
-              your pixel art will live here someday ✧
+          <article class="card" id="music">
+            <div class="card-title">Music</div>
+            <div class="card-text"></div>
+            <div class="card-tag-row">
+              <span class="tag">playlists</span>
             </div>
-          </section>
+          </article>
 
-          <!-- RIGHT SIDE: CATEGORY CARDS -->
-          <section class="grid">
-            <article class="card" id="films">
-              <div class="card-label">Zone 01</div>
-              <div class="card-title">Films</div>
-              <div class="card-text">
-                Mini logs of movies I watch, scenes that stay in my head,
-                and characters I overthink at 2am.
-              </div>
-              <div class="card-tag-row">
-                <span class="tag">watchlists</span>
-                <span class="tag">favorite frames</span>
-                <span class="tag">feelings > ratings</span>
-              </div>
-            </article>
+          <article class="card" id="photo">
+            <div class="card-title">Photography</div>
+            <div class="card-text"></div>
+            <div class="card-tag-row">
+              <span class="tag">pinterest</span>
+            </div>
+          </article>
 
-            <article class="card" id="music">
-              <div class="card-label">Zone 02</div>
-              <div class="card-title">Music</div>
-              <div class="card-text">
-                Songs on repeat, albums that feel like seasons,
-                and little notes about why a track hits so hard.
-              </div>
-              <div class="card-tag-row">
-                <span class="tag">playlists</span>
-                <span class="tag">lyrics</span>
-                <span class="tag">live shows</span>
-              </div>
-            </article>
+          <article class="card" id="writing">
+            <div class="card-title">Blogs / Notes</div>
+            <div class="card-text"></div>
+            <div class="card-tag-row">
+              <span class="tag">writing</span>
+            </div>
+          </article>
 
-            <article class="card" id="photo">
-              <div class="card-label">Zone 03</div>
-              <div class="card-title">Photography</div>
-              <div class="card-text">
-                Imaginary gallery space for things I want to capture:
-                soft light, city corners, and Victorian houses with too many stories.
-              </div>
-              <div class="card-tag-row">
-                <span class="tag">future gallery</span>
-                <span class="tag">film &amp; digital</span>
-              </div>
-            </article>
+        </section>
+      </main>
 
-            <article class="card" id="writing">
-              <div class="card-label">Zone 04</div>
-              <div class="card-title">Writings &amp; Ideas</div>
-              <div class="card-text">
-                Rough thoughts, blog posts, maybe essays.  
-                A place for half-formed ideas to sit until they’re ready.
-              </div>
-              <div class="card-tag-row">
-                <span class="tag">blog</span>
-                <span class="tag">notes</span>
-                <span class="tag">brain dump</span>
-              </div>
-            </article>
-          </section>
-        </main>
-
-        <footer>
-          © <span id="year"></span> Sri · built on GitHub Pages · pink save file unlocked ♡
-        </footer>
-      </div>
+      <footer>
+        © <span id="year"></span> Watermelon Rain ♡
+      </footer>
     </div>
   </div>
 
